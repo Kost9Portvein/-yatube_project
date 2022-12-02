@@ -1,1 +1,29 @@
-<h1>Привет </h1>
+{% extends 'base.html'%}
+{% block content %}
+
+<div> 
+  <h1 class="text-center"> 
+    {{ title }}
+  </h1>
+  <div class="text-center">
+    <a href="{% url 'posts:group_list' 'coffe' %}">
+      Перейти в группу
+    </a>
+  </div>
+  <div class="pb-5 pt-5 post_list_text">
+    {% for post in posts %}
+    <p class="post_list_author">
+      Автор: {{ post.author.get_full_name }}
+    </p> 
+    <p class="post_list_author">
+      Дата публикации: {{ post.pub_date|date:"d E Y" }}
+    </p>
+      <p>{{ post.text }}</p>    
+      {% if post.group %}   
+      <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+      {% endif %} 
+      {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

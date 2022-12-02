@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html> 
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  </head>
+  <body class="main_background">
+    <div class="main_background_content">
+      <title>
+      {% block title %} {% endblock title %}
+      </title>
+      <header>
+        {% include 'includes/header.html' %}
+      </header>
+      <main>
+        {% block content %}
+        {% endblock %}
+      </main>
+    </div>
+    <footer class="footer_background">
+      {% include 'includes/footer.html' %}
+    </footer>
+  </body>
+</html>
+

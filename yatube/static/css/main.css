@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+a {
+    color: rgb(146, 144, 144);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    color: rgb(48, 47, 47);
+    text-decoration: underline;
+}
+
+.header {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.header_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_logo_img {
+    width: 230px;
+}
+
+.main_background {
+    display: flex;
+    align-items: center;
+    background: url(../img/cffe_bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(71, 69, 69);
+    flex-direction: column;
+}
+
+.main_background_content {
+    background: rgb(245, 198, 128);
+    max-width: 1440px;
+    margin: 100px 80px 0;
+    padding: 0 80px;
+    box-shadow: 1px -2px 8px rgb(121, 105, 72);
+}
+
+.header_logo_text {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.post_list_author {
+    font-size: 20px;
+}
+
+.post_list_text {
+    text-align: left;
+    max-width: 1024px;
+}
+
+.main_content {
+    display: flex;
+    justify-content: center;
+}
+
+.main_content_pading {
+    max-width: 1024px;
+}
+
+.link_border:hover {
+    border: 1px solid rgb(48, 47, 47);
+}
+
+.link_button {
+    display: block;
+    height: 80px;
+    width: 250px;
+}
+
+.footer_background {
+    width: 100%;
+    background: rgb(160, 111, 65);
+    border-top: 1px solid rgb(131, 85, 16);
+    min-height: 200px;
+}
